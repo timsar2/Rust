@@ -1,5 +1,9 @@
 fn main() {
-    another_function(5)
+    let y = {
+        let x = 5;
+        x + 1
+    };
+    another_function(y)
 }
 
 fn another_function( x: i32){
