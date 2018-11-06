@@ -3,9 +3,12 @@ fn main() {
         let x = 5;
         x + 1
     };
-    another_function(y)
+    
+    let g = another_function(y);
+
+    println!("g is {}", g)
 }
 
-fn another_function( x: i32){
-    println!("value x is {}", x);
+fn another_function( x: i32) -> i32{
+    x + 1
 }
