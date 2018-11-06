@@ -1,10 +1,12 @@
 fn main() {
-    let y = {
-        let x = 5;
-        x + 1
+    let condition = true;
+    let number = if condition {
+        5
+    } else {
+        6
     };
     
-    let g = another_function(y);
+    let g = another_function(number);
 
     println!("g is {}", g)
 }
