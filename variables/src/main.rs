@@ -7,6 +7,8 @@ fn main() {
 
     println!("The value of x is: {}", x);
 
-   let remainder = 43 % 5;
-    println!("The value of guess is: {}", remainder);
+    let c = 'z';
+    let z = 'ℤ';
+    let heart_eyed_cat = '😻';
+    println!("The value of guess is: {}{}{}", c,z,heart_eyed_cat);
 }
