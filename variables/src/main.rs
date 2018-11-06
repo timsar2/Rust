@@ -1,16 +1,9 @@
 fn main() {
-    let condition = true;
-    let number = if condition {
-        5
-    } else {
-        6
-    };
-    
-    let g = another_function(number);
-
-    println!("g is {}", g)
-}
-
-fn another_function( x: i32) -> i32{
-    x + 1
+    let a = [10, 20, 30, 40, 50];
+    for element in a.iter(){
+        println!("element is {}", element);
+    }
+    for number in (1..4).rev() {
+        println!("number is {}", number);
+    }
 }
