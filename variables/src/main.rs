@@ -7,6 +7,6 @@ fn main() {
 
     println!("The value of x is: {}", x);
 
-    let guess: u32 = "42".parse().expect("Not a number!");
-    println!("The value of guess is: {}", guess);
+   let remainder = 43 % 5;
+    println!("The value of guess is: {}", remainder);
 }
