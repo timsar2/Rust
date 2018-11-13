@@ -4,11 +4,12 @@ fn main() {
 }
 
 fn refrence() {
-    let s1 = String::from("hello");    
-    let len = refrence_calc_length(&s1);
-    println!("refrence: {}", len);
+    let mut s1 = String::from("hello");    
+    let len = refrence_calc_length(&mut s1);
+    println!("refrence: {}, {}", s1, len);
 }
-fn refrence_calc_length(s: &String) -> usize {
+fn refrence_calc_length(s: &mut String) -> usize {
+    s.push_str(", world");
     s.len()
 }
 
