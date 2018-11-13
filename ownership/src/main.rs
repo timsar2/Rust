@@ -7,6 +7,14 @@ fn refrence() {
     let mut s1 = String::from("hello");    
     let len = refrence_calc_length(&mut s1);
     println!("refrence: {}, {}", s1, len);
+    {
+        let r1 = &mut s1;
+        r1.push_str(" R1");
+        println!("first barrow {}", r1)
+    }
+    let r2 = &mut s1;
+    r2.push_str(" then R2");
+    println!("second borrow {}", r2);
 }
 fn refrence_calc_length(s: &mut String) -> usize {
     s.push_str(", world");
