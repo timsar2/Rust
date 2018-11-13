@@ -1,7 +1,16 @@
-fn main() {
-    const X: i32 = 6;
+fn main() {        
+    literal_string();
+    const X: i32 = 6;    
     let fibonachi = fibo_rust(X);
     println!("fib {} is {}", X, fibonachi);
+}
+
+fn literal_string(){
+    let mut s =String::from("Hello");
+    s.push_str(", world");
+    println!("{}", s);
+    
+    
 }
 
 fn fibo_rust(x: i32) -> i32 {
