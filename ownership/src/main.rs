@@ -31,8 +31,12 @@ fn struct_define() {
         active: true
     };
     user1.email = String::from("info.golab@gmail.com");
-    let mut user2 = build_user("Mrg2", "info2@gmail.com");
-    println!("struct_define: {}", user1.email);
+    let mut user2 = User {
+        email: String::from("user2@gmail.com"),
+        username: String::from("Mrg2"),
+        .. user1
+    };
+    println!("struct_define: {}", user2.active);
 }
 
 fn slice_string() {
