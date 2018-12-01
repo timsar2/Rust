@@ -1,7 +1,12 @@
 fn main() {
     
-    let rect_imp_1 = Rectangle { width: 10, height: 20 };
+    let rect_imp_1 = Rectangle { width: 20, height: 40 };
+    let rect_imp_2 = Rectangle { width: 10, height: 20 };
+    let rect_imp_3 = Rectangle { width: 30, height: 80 };
     
+    println!("Can rect1 hold rect2? {}", rect_imp_1.can_hold(&rect_imp_2));
+    println!("Can rect1 hold rect3? {}", rect_imp_1.can_hold(&rect_imp_3));
+
     println!(
        "The area of rectangles from method is {} square pixels",
         rect_imp_1.area()
@@ -38,6 +43,9 @@ fn main() {
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
+    }
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
     }
 }
 
