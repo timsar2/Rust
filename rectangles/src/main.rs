@@ -1,4 +1,12 @@
 fn main() {
+    
+    let rect_imp_1 = Rectangle { width: 10, height: 20 };
+    
+    println!(
+       "The area of rectangles from method is {} square pixels",
+        rect_imp_1.area()
+    );
+
     let rect2 = Rectangle { width: 40, height: 60 };
 
     println!(
@@ -26,6 +34,13 @@ fn main() {
         area(width1, height1)
     );
 }
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
