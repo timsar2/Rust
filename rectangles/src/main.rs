@@ -1,9 +1,12 @@
 fn main() {
     
+    let sq = Rectangle::square(3);
+    println!("create square with assosiated fn: {:#?}", sq);
+
     let rect_imp_1 = Rectangle { width: 20, height: 40 };
     let rect_imp_2 = Rectangle { width: 10, height: 20 };
     let rect_imp_3 = Rectangle { width: 30, height: 80 };
-    
+
     println!("Can rect1 hold rect2? {}", rect_imp_1.can_hold(&rect_imp_2));
     println!("Can rect1 hold rect3? {}", rect_imp_1.can_hold(&rect_imp_3));
 
@@ -46,6 +49,9 @@ impl Rectangle {
     }
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
+    }
+    fn square(size: u32) -> Rectangle {
+        Rectangle { width: size, height: size }
     }
 }
 
